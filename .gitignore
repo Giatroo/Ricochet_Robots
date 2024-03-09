@@ -1,0 +1,8 @@
+venv/
+logs/
+__pycache__/
+data/
+tests/assets/
+.vscode/
+*.bkp
+.coverage

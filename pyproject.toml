@@ -1,0 +1,53 @@
+[tool.black]
+line-length = 80
+
+[tool.isort]
+line_length = 80
+profile = "black"
+
+[tool.flake8]
+max-line-length = 80
+ignore = '''
+    W503,
+    D100,
+    D104,
+    D205,
+    D400,
+    D401
+'''
+
+[tool.pylint.messages_control]
+disable = '''
+    missing-module-docstring,
+    use-list-literal,
+    use-dict-literal,
+    too-many-arguments,
+    too-many-locals,
+    too-few-public-methods,
+    too-many-instance-attributes,
+    unnecessary-ellipsis
+'''
+
+[tool.pylint.format]
+max-line-length = 80
+good-names = "_,df,X,Y,Z"
+
+[tool.pylint.master]
+extension-pkg-whitelist = "pydantic"
+jobs = 0
+ignore-paths = [
+    ".*/site-packages/",
+    ".vscode/",
+    "venv/",
+    ".mypy_cache/",
+    ".git/",
+    ".pytest_cache/"
+]
+
+[tool.pytest.ini_options]
+markers = [
+    "slow: tests that take a considerable amount of time to run",
+]
+
+[tool.mypy]
+ignore_missing_imports = true

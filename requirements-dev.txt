@@ -1,0 +1,15 @@
+-r requirements.txt
+black
+flake8
+freezegun
+ipykernel
+isort
+mypy
+pre-commit
+pydocstyle
+pylint
+pytest<8
+pytest-asyncio
+pytest-cases
+pytest-mock
+pytest-xdist
